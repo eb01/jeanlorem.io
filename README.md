@@ -1,8 +1,5 @@
 # jeanlorem.io
 
-## Dump DB MySQL
-Le fichier .sql contenant les données publiques de la DB est disponible à l'emplacement *jeanlorem_v1.0.0\resources\dump_db_sql*.
-
 ## Présentation
 Jean Lorem est un générateur de texte aléatoire ... sauf qu'en lieu et place du classique lorem ipsum, il utilise les blagues et citations de Jean, le doyen de ma promotion à la 3WA qui nous a toujours épaté par ses envolées lyriques (bon certes, ce n'est pas toujours très fin et ce ne sera pas au goût de tous mais bon !).
 
@@ -23,6 +20,9 @@ J'ai fait un maximum de traitement PHP afin de vérifier les entrées utilisateu
 * Librairies :
 J'ai choisi de m'entraîner avec jQuery sur ce projet afin de mesurer les différence avec du JS vanilla et j'ai fait des essais avec des plugins notamment pour la validation des formulaires en temps réel afin d'améliorer l'expérience utilisateur (avant les "purs" traitements PHP s'exécutant en validant les formulaires).
 J'ai utilisé Bootstrap 3 pour avoir un site responsive de manière efficace et rapide ainsi que pour la mise en forme du menu, des formulaires et du tableau admin.
+
+## Dump DB MySQL
+Le fichier .sql contenant les données publiques de la DB est disponible à l'emplacement *resources/dump_db_sql*.
 
 ## Site web online
 https://jeanlorem.io/
