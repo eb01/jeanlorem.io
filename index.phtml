@@ -1,0 +1,59 @@
+<section>
+	<div class="row">
+	    <div class="box">
+	    	<div class="col-lg-12">
+			    <hr>
+			    <h1>Générateur</h1>
+			    <hr>
+			    <div class="row">
+	                <div class="col-lg-12">
+	                    <div id="share-bar" class="text-center"></div>
+	                </div>
+	            </div>
+		       	<form id="generate-form" class="form-horizontal col-md-offset-2 col-md-8">
+		    	<h2>// Créez votre propre JeanLorem code :</h2>
+					<div class="form-group">
+						<label class="col-md-8 control-label" for="paragraph">Combien de <strong>paragraphes</strong> souhaites-tu :</label>
+						<div class="col-md-4">
+							<input id="paragraph" class="form-control" type="number" name="paragraph" value="1" min="1" max="99" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-8 control-label" for="header-with-tag">Avec ceci, des <strong>titres</strong> : </label>
+						<div class="col-md-4">
+							<select id="header-with-tag" class="form-control" name="header-with-tag">
+								<option selected>Non</option>
+								<?php for($index = 1; $index <= 6; $index++) : ?>
+								<option value="h<?= $index; ?>">h<?= $index; ?></option>
+								<?php endfor; ?>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class=" col-md-8 control-label" for="paragraph-tag">Tu prendras bien des <strong>balises &lt;p&gt;</strong> :</label>
+						<div class="col-md-4">
+							<input id="paragraph-tag" type="checkbox" name="paragraph-tag">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-8 control-label" for="audience">J'ai <strong>plus de 18 ans</strong>,je veux voir du contenu douteux :</label>
+						<div class="col-md-4">
+							<input id="audience" type="checkbox" name="audience">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-offset-4 col-md-4" align="center">
+							<button id="generate-btn" class="btn btn-primary" type="submit" name="generate-btn" value="Générer">Générer</button>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="jokes-zone" class="col-md-12" align="center">Tu n'as plus qu'à <strong>copier/coller</strong> le texte ci-dessous :</label>
+						<div class="col-md-12">
+							<textarea id="jokes-zone" class="form-control" rows="10"></textarea>
+						</div>
+					</div>
+				</form>
+			</div>
+	    </div>
+	</div>
+</section>

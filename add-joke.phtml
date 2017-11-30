@@ -1,0 +1,52 @@
+<section>
+	<div class="row">
+	    <div class="box">
+		    <hr>
+		    <h1>Ajout de blagues/citations</h1>
+		    <hr>
+		    <div class="col-lg-12">
+				<form class="form-horizontal col-md-offset-2 col-md-8 add-edit-form" method="POST" action="add-joke">
+					<?php if(!empty($errorAddEditJokeMessage)) : ?>
+			        <span class="error-message"><?= $errorAddEditJokeMessage ?></span>
+			        <?php endif; ?>
+					<div class="form-group">
+						<label for="joke-tagtype" class="col-md-offset-3 col-md-3 control-label">Type :</label>
+						<div class="col-md-3">
+							<select id="joke-tagtype" class="form-control" name="joke-tagtype">
+									<option value="header">Titre</option>
+									<option value="paragraph">Paragraphe</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="joke-audience" class="col-md-offset-3 col-md-3 control-label">Public :</label>
+						<div class="col-md-3">
+							<select id="joke-audience" class="form-control" name="joke-audience">
+									<option value="all">Tout le monde</option>
+									<option value="adult">Adulte</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="joke-content" class="col-md-12" align="center">
+							Contenu de la blague/citation :<br/>
+							Pour un titre, veuillez entrer entre 8 et 100 caractères.<br/>
+							Pour un paragraphe, veuillez entrer entre 101 et 700 caractères.
+						</label>
+						<div class="col-md-12">
+							<textarea id="joke-content" class="form-control" name="joke-content" rows="10" required></textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-offset-4 col-md-4" align="center">
+							<input type="submit" class="btn btn-primary" name="submit" value="Ajouter">
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- /.col-lg-12 -->
+		</div>
+		<!-- /.box -->
+	</div>
+	<!-- /.row -->
+</section>

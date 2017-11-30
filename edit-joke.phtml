@@ -1,0 +1,76 @@
+<section>
+	<div class="row">
+	    <div class="box">
+		    <hr>
+		    <h1>Édition d'une blague/citation</h1>
+		    <hr>
+		    <div class="col-lg-12">
+				<form class=" form-horizontal col-md-offset-2 col-md-8 add-edit-form" method="POST" action="edit-joke">
+					<?php if(!empty($errorAddEditJokeMessage)) : ?>
+			        <span class="error-message"><?= $errorAddEditJokeMessage ?></span>
+			        <?php endif; ?>
+					<input type="hidden" name="joke-ID" value="<?=$_GET["joke_ID"]?>">
+					<div class="form-group">
+						<label for="joke-tagtype" class="col-md-offset-3 col-md-3 control-label">Type : </label>
+						<div class="col-md-3">
+							<select id="joke-tagtype" class="form-control" name="joke-tagtype">
+								<option value="<?= $joke["joke_tagType"] ?>" selected="<?= $joke["joke_tagType"] ?>">
+								<?php if($joke["joke_tagType"] == "header") : ?>
+									<?= "Titre" ?>
+								<?php else : ?>
+									<?= "Paragraphe" ?>
+								<?php endif; ?>			
+								</option>
+								<?php if($joke["joke_tagType"] == "header") : ?>
+								<option value="paragraph">Paragraphe</option>
+								<?php else : ?>
+								<option value="header">Titre</option>
+								<?php endif; ?>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="joke-audience" class="col-md-offset-3 col-md-3 control-label">Public : </label>
+						<div class="col-md-3">
+							<select id="joke-audience" class="form-control" name="joke-audience">
+								<option value="<?= $joke["joke_audience"] ?>" selected="<?= $joke["joke_audience"] ?>">
+								<?php if($joke["joke_audience"] == "all") : ?>
+									<?= "Tout le monde" ?>
+								<?php else : ?>
+									<?= "Adulte" ?>
+								<?php endif; ?>
+								</option>
+								<?php if($joke["joke_audience"] == "all") : ?>
+								<option value="adult">Adulte</option>
+								<?php else : ?>
+								<option value="all">Tout le monde</option>
+								<?php endif; ?>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="joke-content" class="col-md-12" align="center">
+							Contenu de la blague/citation :<br/>
+							Pour un titre, veuillez entrer entre 8 et 100 caractères.<br/>
+							Pour un paragraphe, veuillez entrer entre 101 et 700 caractères.
+						</label>
+						<div class="col-md-12">
+							<textarea id="joke-content" class="form-control" type="text" name="joke-content" rows="10"><?= $joke["joke_content"] ?></textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-offset-3 col-md-4">
+							<button type="submit" class="btn btn-primary">Mettre à jour</button> 
+						</div>
+						<div class="col-md-4">
+							<button type="reset" class="btn btn-danger">Annuler</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- /.col-lg-12 -->
+		</div>
+		<!-- /.box -->
+	</div>
+	<!-- /.row -->
+</section>
