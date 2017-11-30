@@ -3,7 +3,7 @@
 ## Présentation
 Jean Lorem est un générateur de texte aléatoire ... sauf qu'en lieu et place du classique lorem ipsum, il utilise les blagues et citations de Jean, le doyen de ma promotion à la 3WA qui nous a toujours épaté par ses envolées lyriques (bon certes, ce n'est pas toujours très fin et ce ne sera pas au goût de tous mais bon !).
 
-L'utilisateur peut générer du texte rapidement en fonction de ses propres choix (nombre de paragraphes, type de titres (h1, h2 ...), balises <p>, contenu tous publics ou adulte).
+L'utilisateur peut générer du texte rapidement en fonction de ses propres choix (nombre de paragraphes, type de titres (h1, h2 ...), balises **p**, contenu tous publics ou adulte).
 L'administrateur (Jean, moi-même ou un tiers) peut accéder aux fonctionnalités de visualisation, d'ajout, d'édition et de suppression de blagues/citations.
 
 ## Technique
